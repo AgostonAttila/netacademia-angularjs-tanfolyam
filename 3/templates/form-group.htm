@@ -1,0 +1,7 @@
+<div class="form-group">
+    <label for="{{id}}">{{label}}</label>
+    <input data-ng-if="input_type === 'input'" type="{{type}}" class="form-control" id="{{id}}" name ="{{name}}" data-ng-model="model" data-ng-change="modelChanged(model)" placeholder="{{label}}">
+    <select data-ng-if="input_type === 'select'" name="{{name}}" id="{{id}}" class="form-control" data-ng-model="model" data-ng-change="modelChanged(model)">
+        <option dta-ng-repeat="option in options" value="{{option.value}}">"{{option.label}}"</option>       
+    </select>
+</div>

@@ -1,0 +1,13 @@
+input.ng-dirty{
+    background-color: bisque;
+}
+
+input.ng-invalid.ngtouched{
+    background-color: orangered;
+}
+
+div.error-message{
+    font-style: italic;
+    color: red;
+    margin-top: 3px; 
+}

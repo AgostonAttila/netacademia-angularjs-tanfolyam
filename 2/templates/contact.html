@@ -1,0 +1,31 @@
+<div class="clearfix">&nbsp;</div>
+<div class="row">
+    <div class="col-xs-4 col-xs-offset-3">
+        <form name="regForm" role="form" method="post" action="http://post.nettust.hu" data-ng-submit="checkForm($event)" novalidate>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email cím</label>
+                <input data-ng-model="user.email" name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required>
+                <div class="error-message" data-ng-if="regForm.email.$error.required && regForm.email.$touched">Email kitöltése kötelező</div>
+                <div class="error-message" data-ng-if="regForm.email.$error.email && regForm.email.$touched">Nem megfelelő email cím</div>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Név</label>
+                <input data-ng-model="user.name" name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Név" required>
+                <div class="error-message" data-ng-if="regForm.name.$error.required && regForm.name.$touched">Név kitöltése kötelező</div>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Jelszó</label>
+                <input data-ng-model="user.password" name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Jelszó" pattern="(?=.*\d)(?=.*\[a-z])(?=.*[A-Z]).{8,}" required>
+                <div class="error-message" data-ng-if="regForm.password.$error.required && regForm.password.$touched">Jelszo kitöltése kötelező</div>
+                <div class="error-message" data-ng-if="regForm.password.$error.pattern && regForm.password.$touched">Kis és nagybetű és szám + nagyobb mint 8!!!!
+                    <div>
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Regisztráció</button>
+
+        </form>
+        </div>
+        </div>

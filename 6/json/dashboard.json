@@ -1,0 +1,39 @@
+{
+    "comments": [
+        {
+            "date": "2015-10-01",
+            "content": "SZiasztok jó az oldal"
+        },
+        {
+            "date": "2015-10-09",
+            "content": "SZiasztok nem jó az oldal"
+        }
+    ],
+    "tasks": [
+        {
+            "date": "2015-10-01",
+            "content": "Programmozás"
+        },
+        {
+            "date": "2015-10-09",
+            "content": "Vegyél kávét"
+        }
+    ],
+    "orders": [
+        {
+            "date": "2015-10-01",
+            "note": "11 es kapu csengő",
+            "user": "Kiss Péter",
+            "price": 2555,
+            "product": "porolo"
+        }
+    ],
+    "tickets": [
+        {
+            "date": "2015-10-01",
+            "content": "eltörött a nyele",
+            "user": "Kiss Péter",
+            "product": "porolo"
+        }
+    ]
+}

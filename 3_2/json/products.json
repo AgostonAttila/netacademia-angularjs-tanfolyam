@@ -1,0 +1,32 @@
+[
+    {
+        "id": "10",
+        "name": "daralo",
+        "price": "1255",
+        "stock": "5"
+},
+    {
+        "id": "11",
+        "name": "vasalo",
+        "price": "12055",
+        "stock": "51"
+},
+    {
+        "id": "12",
+        "name": "kés",
+        "price": "120",
+        "stock": "500"
+},
+    {
+        "id": "13",
+        "name": "deszka",
+        "price": "300",
+        "stock": "1"
+},
+    {
+        "id": "14",
+        "name": "villa",
+        "price": "50",
+        "stock": "78"
+}
+]

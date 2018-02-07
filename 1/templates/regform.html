@@ -1,0 +1,14 @@
+<!--<div data-ng-controller="formCtrl">   -->    
+      <form action="/" class="my-form" novalidate>
+            <label for="name">Név:</label>
+            <input data-ng-model="user.name" type="text" id="name">        
+            <br>
+            <label for="email">Email cím</label>
+            <input data-ng-model="user.email" type="email" id="email"
+            ng-model-options="{updateOn: 'blur'}">
+            <br>
+            Egyenleg: {{ egyenleg | currency}}
+            <br>
+            <button type="submit">Regisztráció</button>
+    </form>
+  <!-- </div> -->

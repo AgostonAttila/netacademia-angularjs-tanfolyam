@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html data-ng-app="mainModule">
+    <head>
+    <meta charset="utf-8">
+        <title>AngularJS alapok</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="css/main.css">        
+    </head>
+    <body>
+        <div data-ng-controller="testCtrl">
+            <label>Name:</label>
+            <input type ="text" data-ng-model="yourName" placeholder="Enter a name here">
+            <button data-ng-click="clickHandler()">GO</button>
+            <hr>
+            <h1 data-ng-bind="greeting()"></h1>
+            <h2 data-ng-bind="myNote"></h2>            
+        </div>  
+        
+        <!-- Form -->   
+        <div data-ng-include ="'templates/regform.html'" data-ng-controller="formCtrl"></div>
+       <!-- <ng-include src="'/templates/regform.html'"></ng-include> -->   
+        
+        <!-- Form -->
+        
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

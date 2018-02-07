@@ -1,0 +1,12 @@
+<form novalidate>
+ <form-group data-ng-model="user.email" data-type="email" data-label = "Email address"></form-group>
+ <form-group data-ng-model="user.fullname" data-id="fullname" data-label = "Full name"></form-group>
+ <form-group data-ng-model="user.birthdate" data-type="date" data-label = "Birth date"></form-group>
+  
+  <form-group data-ng-model="user.gender" data-type="select" data-options ="genders" data-label = "Gender"></form-group>
+   
+   <div class="form-group">{{user.amount | currencyfilter:'USD':'.' }}</div>
+   
+  <button type="button" class="btn btn-default" data-ng-click="checkForm()">Submit</button>
+  
+</form>

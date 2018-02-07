@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html data-ng-app="crudModule">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Angular CRUD</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Project name</a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" data-ng-controller="crudCtrl">
+        <h1>Crud alkalmazás</h1>
+        <div class="row">
+            <div class="col-xs-2">
+                <select name="model" data-ng-model="selectedTable" data-ng-change="getSelectedTable()">
+                    <option data-ng-repeat="table in tables" value="{{table}}">{{table}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <table role="table" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Név</th>
+                            <th>Email</th>
+                            <th>Telefon</th>
+                            <th>Foglalkozás</th>
+                            <th>Műveletek</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#</td>
+                            <td>
+                                <input type="text" class="form-control " data-ng-model="newUser.name">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control " data-ng-model="newUser.email">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control " data-ng-model="newUser.phone">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control " data-ng-model="newUser.job">
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-success" data-ng-click="create(newUser)">
+                                        <span class="glyphicon glyphicon-import"></span>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-ng-repeat="user in users">
+                            <td>{{user.id}}</td>
+                            <td>
+                                <input type="text" class="form-control " data-ng-model="user.name">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control " data-ng-model="user.email">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control " data-ng-model="user.phone">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control " data-ng-model="user.job">
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-primary" data-ng-click="update(user)">
+                                        <span class="glyphicon glyphicon-refresh"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger" data-ng-click="delete(user.id)">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/crudFactory.js"></script>
+</body>
+
+</html>
