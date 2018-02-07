@@ -1,3 +1,3 @@
 ## Netacademia AngularJS tanfolyam
 
-https://github.com/AgostonAttila/netacademia-angularjs-tanfolyam
+https://netacademia.hu/Tanfolyam/angularjs-angularjs-tanfolyam
